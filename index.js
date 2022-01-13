@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors")
 const mongodb = require("mongodb")
 const mongoClient = mongodb.MongoClient;
-const URL = "mongodb://localhost:27017/zenclass";
+const URL = "mongodb+srv://admin:admin123@cluster0.hijj3.mongodb.net?retryWrites=true&w=majority";
 
 let usersList = [];
 app.use(express.json())

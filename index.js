@@ -12,6 +12,8 @@ app.use(cors({
     origin: "*"
 }))
 
+//userList
+
 app.get("/users",async function (req, res) {
 
     try {
@@ -27,6 +29,8 @@ app.get("/users",async function (req, res) {
    
     // res.json(usersList) 
 })
+
+// edit page
 
 app.get("/user/:id",async function (req, res) {
   
@@ -58,6 +62,8 @@ app.get("/user/:id",async function (req, res) {
 
 })
 
+// user creat
+
 app.post("/create-user", async function (req, res) {
 
     try {
@@ -82,6 +88,8 @@ app.post("/create-user", async function (req, res) {
         // usersList.push(req.body)
         // res.json({"mess":"user add"})
 })
+
+// user edit 
 
 app.put("/user/:id",async function (req, res) {
 
@@ -109,6 +117,8 @@ app.put("/user/:id",async function (req, res) {
 
     // res.json({ "mess": "updated" })
 })
+
+//user delete
 
 app.delete("/user/:id",async function (req, res) {
     

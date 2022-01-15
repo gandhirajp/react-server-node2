@@ -170,7 +170,7 @@ app.post("/register", async function (req, res) {
         let hash = await bcrypt.hash(req.body.password, salt);
         req.body.password = hash;
 
-        await db.collection("users").insertOne(req.body)
+        await db.collection("data").insertOne(req.body)
         connection.close();
         res.json({ message: "user creatrd" });
     } catch (error) {
@@ -184,7 +184,7 @@ app.post("/login", async function (req, res) {
         let connection = await mongoClient.connect(URL);
         let db = connection.db("zenclass") 
 
-        let user = await db.collection("users").findOne({ email: req.body.email })
+        let user = await db.collection("data").findOne({ email: req.body.email })
         if (user) { 
             let passwordResult = await bcrypt.compare(req.body.password,user.password)
             if (passwordResult) {

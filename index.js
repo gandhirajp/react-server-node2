@@ -7,7 +7,7 @@ const mongoClient = mongodb.MongoClient;
 const URL="mongodb+srv://admin:admin123@cluster0.hijj3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 // const URL = "mongodb://localhost:27017";
 const bcrypt = require("bcryptjs")
-const jwt=require("jsonwebtoken")  
+const jwt=require("jsonwebtoken")   
 
 const secret="Gdc3XkBkRy";
 let usersList = [];

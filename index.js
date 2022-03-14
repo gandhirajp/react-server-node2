@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors")
 const mongodb = require("mongodb")
 const mongoClient = mongodb.MongoClient;
-const URL = "mongodb+srv://admin:admin123@cluster0.hijj3.mongodb.net?retryWrites=true&w=majority";
-// const URL = "mongodb://localhost:27017";
+// const URL = "mongodb+srv://admin:admin123@cluster0.hijj3.mongodb.net?retryWrites=true&w=majority";
+ const URL = "mongodb://localhost:27017";
 const bcrypt = require("bcryptjs")
 const jwt=require("jsonwebtoken")  
 
@@ -206,9 +206,9 @@ app.post("/login", async function (req, res) {
 })
 // login method end
 
-app.get("/dashboard",authenticate,function (req, res) {
-    res.json({ totalUsers: 30 })
-})
-
+// app.get("/dashboard",authenticate,function (req, res) {
+//     res.json({ totalUsers: 30 })
+// })
+ 
 app.listen(process.env.PORT || 3001)  //  pocess.env.PORT || this heroku processs 
 

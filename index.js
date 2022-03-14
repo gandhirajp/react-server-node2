@@ -12,7 +12,7 @@ const jwt=require("jsonwebtoken")
 const secret="Gdc3XkBkRy";
 let usersList = [];
 app.use(express.json())
-
+ 
 app.use(cors({ 
     origin: "*"  
 }))   
